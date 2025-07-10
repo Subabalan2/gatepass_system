@@ -1,5 +1,5 @@
 const { getDb } = require("../config/db");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const collectionName = "Users";
 
