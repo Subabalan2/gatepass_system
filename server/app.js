@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const errorHandler = require("./middleware/errorHandler.js");
+const errorHandler = require("./middleware/errorhandler.js");
 
 // Import routes
 const gatePassRoutes = require("./routes/gatePassRoutes.js");
