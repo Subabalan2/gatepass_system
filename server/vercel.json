@@ -11,14 +11,5 @@
       "src": "/(.*)",
       "dest": "/server.js"
     }
-  ],
-  "functions": {
-    "server.js": {
-      "includeFiles": [
-        "routes/gatePassRoutes.js",
-        "routes/receiptRoutes.js",
-        "routes/dashboardRoutes.js"
-      ]
-    }
-  }
+  ]
 }
