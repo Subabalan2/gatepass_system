@@ -1,0 +1,93 @@
+/* Container for the login choices */
+.login-choice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('../../public/images/homepage.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif, Arial, Helvetica;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 3px solid #003366;
+  margin-left: 70px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card styling for login options */
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for elegance */
+  padding: 50px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  text-align: center;
+  max-width: 400px; /* Restrict width for better focus */
+}
+
+/* Heading styles */
+.login-card h1 {
+  margin-bottom: 20px;
+  font-size: 28px; /* Larger heading size */
+  color: #333; /* Neutral color for readability */
+  font-weight: bold;
+}
+
+/* Description styles */
+.login-card p {
+  margin-bottom: 30px;
+  font-size: 18px; /* Slightly larger text for better readability */
+  color: #666; /* Subtle gray tone for secondary text */
+}
+
+/* Button group styling */
+.button-group {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 20px; /* Add more spacing between buttons */
+}
+
+/* Button styles */
+.button-group button {
+  padding: 15px; /* Increased padding for better click area */
+  border: none;
+  border-radius: 10px; /* Rounded corners for modern look */
+  font-size: 18px; /* Larger font size for better visibility */
+  font-weight: bold; /* Make button text stand out */
+  
+  background-color: #007bff; /* Primary blue color */
+  color: white; /* White text for contrast */
+  
+  transition: all 0.3s ease-in-out; /* Smooth hover effect transition */
+  
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Hover effect for buttons */
+.button-group button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Add subtle scaling effect on hover for buttons */
+.button-group button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width:768px) {
+    .login-card {
+        padding:30px ;/* reduce space*/
+    }
+}

@@ -1,0 +1,343 @@
+
+body {
+  margin: 0; 
+}
+
+.staffs-approvalbg-container {
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.approval-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.approval-header {
+  background-color: #1e56a0;
+  color: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e5eb;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  color: #d1e4ff;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.refresh-btn {
+  background-color: #173d77;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-btn:hover {
+  background-color: #0e2c5a;
+}
+
+.filter-bar {
+  background-color: #f2f4f8;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #e1e5eb;
+}
+
+.filter-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-right: 0.5rem;
+}
+
+.filter-btn {
+  background-color: #e2e8f0;
+  border: none;
+  border-radius: 20px;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background-color: #cbd5e0;
+}
+
+.filter-btn.active {
+  background-color: #1e56a0;
+  color: white;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.spinner {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #1e56a0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.requests-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.requests-table th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.requests-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.requests-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.column-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+.badge {
+  background-color: #e0ebff;
+  color: #1e56a0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.time-display {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.time-not-specified {
+  color: #94a3b8;
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.purpose-text {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.approve-btn {
+  background-color: #dcf5e8;
+  color: #166534;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+
+.approve-btn:hover {
+  background-color: #bbf0d3;
+}
+
+.disapprove-btn {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+
+.disapprove-btn:hover {
+  background-color: #fecaca;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  color: #cbd5e0;
+}
+
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.empty-description {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.approval-footer {
+  background-color: #f8fafc;
+  padding: 1rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+@media (max-width: 992px) {
+  .requests-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .approval-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .refresh-btn {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .staffs-approvalbg-container {
+    padding: 1rem;
+  }
+  
+  .approval-container {
+    border-radius: 6px;
+  }
+  
+  .filter-bar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .requests-table th,
+  .requests-table td {
+    padding: 0.75rem;
+  }
+}
+
+/* Add these new styles to the staffapproval.css file */
+
+/* Footer and Logout Button Styles */
+.approval-footer {
+  padding: 15px 20px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #a39e9e;
+  color: #f8f5f5;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn svg {
+  stroke: #fff;
+}
+
+.logout-btn:hover {
+  background-color: #e60000;
+}

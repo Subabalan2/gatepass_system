@@ -1,0 +1,316 @@
+
+/*
+  ==============================================================
+  MODERN DASHBOARD STYLES
+  ==============================================================
+  - Clean and professional design inspired by the target image.
+  - Uses CSS variables for easy customization.
+  - Fully responsive for desktop, tablet, and mobile.
+*/
+
+/* --- Root Variables --- */
+:root {
+  /* Primary color palette from the screenshot */
+  --dashboard-primary: #3b5998; /* A nice, deep blue */
+  --dashboard-primary-dark: #2d4373;
+  --dashboard-bg: #f5f7fa;
+  --dashboard-surface: #ffffff;
+  --dashboard-border: #e2e8f0;
+
+  /* Text colors */
+  --text-dark: #1a202c;
+  --text-medium: #4a5568;
+  --text-light: #ffffff;
+  --text-subtle: #a0aec0;
+
+  /* Other properties */
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-radius-lg: 12px;
+  --border-radius-md: 8px;
+  
+  /* View button specific */
+  --view-btn-primary: #4299e1;
+  --view-btn-hover: #3182ce;
+}
+
+/* --- Base & Body --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--dashboard-bg);
+  color: var(--text-dark);
+}
+
+/* --- Main Dashboard Container --- */
+.dashboard-page-container {
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* --- Main Header (Blue Bar) --- */
+.dashboard-header {
+  background-color: var(--dashboard-primary);
+  color: var(--text-light);
+  padding: 2rem 2.5rem;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping on small screens */
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.header-subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+  max-width: 400px;
+}
+
+/* --- Content Card (White Box with Table) --- */
+.content-card {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: var(--dashboard-surface);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--dashboard-border);
+}
+
+.card-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.refresh-btn {
+  background-color: var(--dashboard-primary-dark);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.refresh-btn:hover {
+  background-color: #1e2a4a;
+}
+
+/* --- Data Table --- */
+.table-container {
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  background-color: #f8fafc;
+  color: var(--text-medium);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--dashboard-border);
+}
+
+.data-table td {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--dashboard-border);
+  color: var(--text-medium);
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover {
+  background-color: #f8fafc;
+}
+
+/* --- Special Cell Styles --- */
+.approval-id-cell {
+  font-family: 'SF Mono', 'Courier New', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--dashboard-primary-dark);
+}
+
+.purpose-cell {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Action Buttons --- */
+.action-cell .btn {
+  background-color: var(--dashboard-surface);
+  color: var(--dashboard-primary);
+  border: 1px solid var(--dashboard-border);
+  border-radius: var(--border-radius-md);
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.action-cell .btn:hover {
+  background-color: var(--dashboard-primary);
+  color: var(--text-light);
+  border-color: var(--dashboard-primary);
+}
+
+/* --- View Receipt Button Styles --- */
+.view-receipt-btn {
+  background-color: var(--view-btn-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(66, 153, 225, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.view-receipt-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.6s ease;
+}
+
+.view-receipt-btn:hover {
+  background-color: var(--view-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(49, 130, 206, 0.4);
+}
+
+.view-receipt-btn:hover:before {
+  left: 100%;
+}
+
+.view-receipt-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(49, 130, 206, 0.4);
+}
+
+/* --- Loading & Empty States --- */
+.loading-state, .empty-state {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-subtle);
+}
+
+/* --- Footer --- */
+.dashboard-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  color: var(--text-medium);
+}
+
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e2e8f0;
+  color: var(--text-medium);
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ef4444; /* Red for logout */
+  color: var(--text-light);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .dashboard-page-container {
+    padding: 1.5rem;
+  }
+  .header-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page-container {
+    padding: 1rem;
+  }
+  .dashboard-header, .card-header {
+    padding: 1.5rem;
+  }
+  .data-table th, .data-table td {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+  .header-subtitle {
+    font-size: 0.9rem;
+  }
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .data-table th, .data-table td {
+    padding: 0.75rem;
+  }
+  .view-receipt-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+

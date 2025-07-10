@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/server.js"
+    }
+  ],
+  "functions": {
+    "server.js": {
+      "includeFiles": [
+        "routes/gatePassRoutes.js",
+        "routes/receiptRoutes.js",
+        "routes/dashboardRoutes.js"
+      ]
+    }
+  }
+}

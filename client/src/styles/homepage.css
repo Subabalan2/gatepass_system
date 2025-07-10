@@ -1,0 +1,179 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homebg{
+  background-image: url('../../public/images/homepage1.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat; 
+}
+
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: rgba(240, 248, 255, 0.295);
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  color: #0d3b66;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Select dropdown styling */
+select {
+  display: block;      
+  width: 200px;               
+  margin: 20px auto;           
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #0d3b66;
+  border-radius: 5px;
+  background-color: white;
+  color: #0d3b66;
+}
+
+
+select:focus {
+  outline: none;
+  border-color: #0288d1;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #0d3b66;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top:390px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+/* Responsive design */
+@media screen and (max-width: 1024px) {
+  .content h1 {
+    font-size: 2rem;
+  }
+  
+  .content p {
+    font-size: 1.1rem;
+  }
+  
+  .footer {
+    margin-top:600px;
+  }
+}
+
+/* For tablets */
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 60px 15px;
+  }
+  
+  .content h1 {
+    font-size: 1.8rem;
+  }
+  
+  select {
+    width: 180px;
+  }
+  
+  .footer {
+    margin-top: 250px;
+    padding: 15px;
+  }
+}
+
+/* For large mobile phones */
+@media screen and (max-width: 576px) {
+  .content {
+    padding: 40px 10px;
+  }
+  
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  
+  .content p {
+    font-size: 1rem;
+  }
+  
+  select {
+    width: 160px;
+    font-size: 0.9rem;
+  }
+  
+  .footer {
+    margin-top:600px;
+    padding: 12px;
+  }
+  
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+/* For small mobile phones */
+@media screen and (max-width: 375px) {
+  .content {
+    padding: 30px 8px;
+  }
+  
+  .content h1 {
+    font-size: 1.3rem;
+  }
+  
+  .content p {
+    font-size: 0.9rem;
+  }
+  
+  select {
+    width: 140px;
+    padding: 8px;
+  }
+  
+  .footer {
+    margin-top:600px;
+    padding: 10px;
+  }
+  
+  .footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* For landscape orientation */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .hero-section {
+    min-height: 120vh;
+  }
+  
+  .content {
+    padding: 30px 15px;
+  }
+  
+  .footer {
+    margin-top: 1000px;
+  }
+}
