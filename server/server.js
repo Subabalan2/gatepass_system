@@ -1,7 +1,7 @@
 const app = require("./app");
 const connectDB = require("./config/db");
 
-const port = process.env.PORT || 3002
+const port = process.env.PORT || 3002;
 
 async function startServer() {
   try {
