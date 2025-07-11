@@ -2,7 +2,12 @@
 const { MongoClient } = require("mongodb");
 require("dotenv").config();
 
-const mongoURL = process.env.MONGO_URI 
+const mongoURL = "mongodb+srv://bala:balakeerthi@gate.4elonoq.mongodb.net/?retryWrites=true&w=majority&appName=gate";
+if (!mongoURL) {
+  throw new Error(
+    "MONGO_URI environment variable is not set. Please check your .env file or environment variables."
+  );
+}
 const dbName = "GatePass";
 
 let clientInstance; // To store the connected client
