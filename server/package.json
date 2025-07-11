@@ -18,8 +18,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.10.1",
     "nodemailer": "^6.10.1",
-    "puppeteer": "^24.6.1",
-    "message": "Backend is running"
+    "puppeteer": "^24.6.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
