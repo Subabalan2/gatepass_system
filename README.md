@@ -103,7 +103,7 @@ gate-pass-system/
   </tr>
   <tr>
     <td>Portfolio</td>
-    <td><a href="https://subabalan2.github.io/portfolio/">your-portfolio-link.com</a></td>
+    <td><a href="https://subabalan2.github.io/portfolio/">Its_Me_Developer</a></td>
   </tr>
   <tr>
     <td>Contact</td>
